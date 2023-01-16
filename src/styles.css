@@ -1,0 +1,189 @@
+/*
+sunny = url('https://images.pexels.com/photos/1303216/pexels-photo-1303216.jpeg?auto=compress&cs=tinysrgb&w=1600');
+cloudy = url("https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1600");
+https://images.pexels.com/photos/14944496/pexels-photo-14944496.jpeg?auto=compress&cs=tinysrgb&w=1600;
+
+partly-cloudy = url('https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg?auto=compress&cs=tinysrgb&w=1600');
+snowy = url('https://images.pexels.com/photos/6618008/pexels-photo-6618008.jpeg?auto=compress&cs=tinysrgb&w=1600');
+https://images.pexels.com/photos/3334473/pexels-photo-3334473.jpeg?auto=compress&cs=tinysrgb&w=1600
+https://images.pexels.com/photos/6617796/pexels-photo-6617796.jpeg?auto=compress&cs=tinysrgb&w=1600
+https://images.pexels.com/photos/760110/pexels-photo-760110.jpeg?auto=compress&cs=tinysrgb&w=1600
+https://images.pexels.com/photos/2423351/pexels-photo-2423351.jpeg?auto=compress&cs=tinysrgb&w=1600
+
+rainy = url('https://images.pexels.com/photos/9065305/pexels-photo-9065305.jpeg?auto=compress&cs=tinysrgb&w=1600');
+*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  color: #fff;
+}
+.theme {
+  background: linear-gradient(black, black),
+    url("https://images.pexels.com/photos/9065305/pexels-photo-9065305.jpeg?auto=compress&cs=tinysrgb&w=1600")
+      no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(3px);
+}
+.container {
+  padding: 0;
+  height: 70%;
+  margin: auto;
+  background: url("https://images.pexels.com/photos/9065305/pexels-photo-9065305.jpeg?auto=compress&cs=tinysrgb&w=1600")
+    no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cityInfo {
+  padding: 3rem;
+  flex-grow: 1;
+}
+.time #currentTime {
+  font-size: 5rem;
+}
+.time span {
+  font-size: 1rem;
+}
+.cityName {
+  text-align: end;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.cityName div {
+  flex-grow: 2;
+}
+.cityName span {
+  flex-grow: 0.1;
+  text-align: center;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.cityName span:hover {
+  color: #a3bce2;
+}
+.cityName h2 {
+  font-size: 2.5rem;
+}
+.searchCity {
+  margin-left: 3rem;
+  align-content: end;
+}
+form {
+  width: 50%;
+  display: flex;
+}
+input {
+  flex-grow: 1;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border: none;
+}
+button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.cityStatus {
+  height: 13rem;
+  padding: 2rem;
+  background-color: #353b49;
+  opacity: 0.9;
+  margin: 0;
+  justify-content: space-evenly;
+}
+.currentStatusLogo,
+.currentStatusTemperature,
+.nextDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nextDay {
+  justify-content: space-between;
+}
+.currentStatusLogo img {
+  width: 100px;
+}
+.currentStatusTemperature p {
+  background-color: #2c3034;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 2px 9px;
+  font-size: 1rem;
+}
+.currentStatusTemperature h2 {
+  font-size: 2.5rem;
+}
+
+.nextDay img {
+  width: 3rem;
+}
+.nextDay > :first-child {
+  background-color: #2c3034;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 2px 9px;
+  font-size: 0.7rem;
+}
+.convertTemp {
+  cursor: pointer;
+}
+@media only screen and (max-width: 912px) {
+  .container {
+    height: 90%;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .cityStatus {
+    height: 24rem;
+    padding: 1rem;
+  }
+  .container {
+    height: 100%;
+    background-position: center;
+  }
+  .cityInfo {
+    padding: 2rem;
+  }
+  form {
+    width: 100%;
+  }
+  .searchCity {
+    margin: 1rem;
+  }
+  .cityName {
+    text-align: start;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .cityStatus {
+    height: 21rem;
+    padding: 1rem;
+  }
+  .nextDay img {
+    width: 2rem;
+  }
+}
