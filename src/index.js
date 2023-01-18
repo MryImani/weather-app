@@ -104,6 +104,11 @@ function getDateAndTime(date) {
   var strTime = hours + ":" + minutes;
   document.getElementById("currentTime").innerHTML = strTime;
   document.getElementById("statusTime").innerHTML = ampm;
+  document.querySelector(".dateMobileShow .date").innerHTML = `${
+    days[date.getDay()]
+  }${strTime}, ${date.getDate()} ${
+    months[date.getMonth()]
+  } ${date.getFullYear()}`;
   utc = date.getTime() + date.getTimezoneOffset() * 60000;
   console.log(new Date(utc));
 }
