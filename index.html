@@ -36,18 +36,25 @@
             <h1 class="time">
               <span id="currentTime">12:30</span><span id="statusTime">PM</span>
             </h1>
-
             <h5 class="date">Monday,9 January 2023</h5>
-            <h6>
-              <a href="https://github.com/MryImani/weather-app" target="_blank"
-                >Link to source code</a
-              >
-            </h6>
+            <ul>
+              <li>
+                <p>Humidity: <span class="humidity">89%</span></p>
+              </li>
+              <li>
+                <p>Wind: <span class="wind">3.6km/h</span></p>
+              </li>
+            </ul>
           </div>
           <div class="col-sm-6 col-12 cityName">
             <div>
               <h2 id="cityName">Mashhad</h2>
-              <h5 id="country"></h5>
+              <h5 id="country" class="d-none d-sm-block"></h5>
+              <p class="dateMobileShow d-block d-sm-none">
+                <span class="date">Monday 13:59,9 January 2023</span><br />
+                Humidity: <span class="humidity">89%</span> ,Wind:
+                <span class="wind">3.6km/h</span>
+              </p>
             </div>
             <span><i class="fa-solid fa-location-dot"></i></span>
           </div>
@@ -74,58 +81,107 @@
           </div>
         </div>
         <div class="row cityStatus">
-          <div class="col-sm-1 col-6 currentStatusLogo">
+          <div
+            class="col-12 border-bottom border-dark-subtle pb-2 cityStatusTitle"
+          >
+            <div>
+              <p>Daily Forecast</p>
+            </div>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-primary" for="btnradio1">°C</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary" for="btnradio2">°F</label>
+            </div>
+          </div>
+          <div class="col-sm-1 col-6 currentStatusLogo pt-3">
             <img class="" src="images/rainy.png" alt="weather status logo" />
           </div>
-          <div class="col-sm-1 col-6 currentStatusTemperature">
+          <div class="col-sm-1 col-6 currentStatusTemperature pt-3">
             <p>TODAY</p>
             <h2>
-              <span class="celsius">4</span><span class="convertTemp">°C</span>
+              <span class="temperature">-2</span
+              ><span><sup class="temperatureUnit">°C</sup></span>
             </h2>
+            <h6 class="weatherDescription">cloudy</h6>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>TUE</span>
             <img src="images/sunny.png" alt="weather status logo" />
             <div>
-              <span class="celsius">12</span><span class="convertTemp">°C</span>
+              <span class="temperature max">6</span><span>°</span>
+              <span class="temperature min">-1</span><span>°</span>
             </div>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>WED</span>
             <img src="images/partly-cloudy.png" alt="weather status logo" />
             <div>
-              <span class="celsius">10</span><span class="convertTemp">°C</span>
+              <span class="temperature max">4</span><span>°</span>
+              <span class="temperature min">-1</span><span>°</span>
             </div>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>THU</span>
             <img src="images/cloudy.png" alt="weather status logo" />
             <div>
-              <span class="celsius">8</span><span class="convertTemp">°C</span>
+              <span class="temperature max">3</span><span>°</span>
+              <span class="temperature min">-1</span><span>°</span>
             </div>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>FRI</span>
             <img src="images/cloudy.png" alt="weather status logo" />
             <div>
-              <span class="celsius">8</span><span class="convertTemp">°C</span>
+              <span class="temperature max">2</span><span>°</span>
+              <span class="temperature min">-2</span><span>°</span>
             </div>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>SAT</span>
             <img src="images/rainy.png" alt="weather status logo" />
             <div>
-              <span class="celsius">4</span><span class="convertTemp">°C</span>
+              <span class="temperature max">1</span><span>°</span>
+              <span class="temperature min">-3</span><span>°</span>
             </div>
           </div>
-          <div class="col-sm-1 col-2 nextDay">
+          <div class="col-sm-1 col-2 nextDay pt-3">
             <span>SUN</span>
             <img src="images/snowy.png" alt="weather status logo" />
             <div>
-              <span class="celsius">-2</span><span class="convertTemp">°C</span>
+              <span class="temperature max">2</span><span>°</span>
+              <span class="temperature min">-3</span><span>°</span>
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <p class="">
+          This project was coded by MryImn and is
+          <a href="https://github.com/MryImani/weather-app" target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a href="">hosted on Netlify</a>
+        </p>
       </div>
     </div>
     <script src="src/index.js"></script>
