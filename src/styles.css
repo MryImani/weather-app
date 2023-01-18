@@ -170,6 +170,11 @@ button {
 .convertTemp {
   cursor: pointer;
 }
+@media only screen and (min-width: 768px) {
+  .currentStatusTemperature {
+    flex-basis: max-content;
+  }
+}
 @media only screen and (max-width: 912px) {
   .container {
     height: 90%;
