@@ -289,10 +289,12 @@ button {
   }
   .cityName {
     text-align: start;
-    padding-top: 0;
   }
   .cityStatusTitle {
     padding: 0 0.8rem;
+  }
+  .nextDay .temperature {
+    font-size: 10px;
   }
 }
 
